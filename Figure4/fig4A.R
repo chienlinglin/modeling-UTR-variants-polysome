@@ -1,6 +1,6 @@
 # library
+library(coin)
 library(ggplot2)
-library(ggpubr)
 library(ggrepel)
 
 # load raw data
