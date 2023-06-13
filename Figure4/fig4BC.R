@@ -43,7 +43,7 @@ enrich_stat <-
   })
 
 
-# fig4A
+# fig4B
 tbl4A <- merge(enrich_stat$rbp_ptrn, subset(mMotif, select = c("Matrix_id", "Motif")), by.x = "feature", by.y = "Matrix_id", all.x = TRUE)
 tbl4A <- 
   unique(transform(tbl4A, 
@@ -63,7 +63,7 @@ ggplot(tbl4A)+
   labs(x = "log2 risk ratio", y = "-log10(p.value)", title = "Motif enriched in UTRs with significantly changed translatability")+
   theme_bw()  
 
-# fig4B
+# fig4C
 tbl4B <- 
   transform(enrich_stat$rbp_gs, 
                    utr = factor(utr, levels = c("5'UTR", "3'UTR")), 
